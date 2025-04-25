@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cardFrontColor: "#c1b1ce",
       cardMatchedColor: "#9dd9d2",
       images: [
-        "./images/animals/cow.png",
+        "images/animals/cow.png",
         "./images/animals/elephant.webp",
         "./images/animals/fox.png",
         "./images/animals/hamster.png",
