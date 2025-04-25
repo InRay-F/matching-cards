@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
       cardFrontColor: "#c1b1ce",
       cardMatchedColor: "#9dd9d2",
       images: [
-        "./images/animals/cow.png",
-        "./images/animals/elephant.webp",
-        "./images/animals/fox.png",
-        "./images/animals/hamster.png",
-        "./images/animals/lion.webp",
-        "./images/animals/monkey.webp",
-        "./images/animals/panda.webp",
-        "./images/animals/penguin.png",
+        "/images/animals/cow.png",
+        "/images/animals/elephant.webp",
+        "/images/animals/fox.png",
+        "/images/animals/hamster.png",
+        "/images/animals/lion.webp",
+        "/images/animals/monkey.webp",
+        "/images/animals/panda.webp",
+        "/images/animals/penguin.png",
       ],
     },
     space: {
@@ -21,14 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
       cardFrontColor: "#9683EC",
       cardMatchedColor: "#28c4f5",
       images: [
-        "./images/space/alien.webp",
-        "./images/space/astronaut.webp",
-        "./images/space/galaxy.webp",
-        "./images/space/moon.png",
-        "./images/space/planet.png",
-        "./images/space/rocket.png",
-        "./images/space/star.png",
-        "./images/space/sun.png",
+        "/images/space/alien.webp",
+        "/images/space/astronaut.webp",
+        "/images/space/galaxy.webp",
+        "/images/space/moon.png",
+        "/images/space/planet.png",
+        "/images/space/rocket.png",
+        "/images/space/star.png",
+        "/images/space/sun.png",
       ],
     },
     fantasy: {
@@ -36,27 +36,27 @@ document.addEventListener("DOMContentLoaded", () => {
       cardFrontColor: "#E3DAC9",
       cardMatchedColor: "#85ccec",
       images: [
-        "./images/fantasy/castle.png",
-        "./images/fantasy/crown.png",
-        "./images/fantasy/dragon.webp",
-        "./images/fantasy/griffin.webp",
-        "./images/fantasy/potion.png",
-        "./images/fantasy/sword.png",
-        "./images/fantasy/unicorn.png",
-        "./images/fantasy/wand.png",
+        "/images/fantasy/castle.png",
+        "/images/fantasy/crown.png",
+        "/images/fantasy/dragon.webp",
+        "/images/fantasy/griffin.webp",
+        "/images/fantasy/potion.png",
+        "/images/fantasy/sword.png",
+        "/images/fantasy/unicorn.png",
+        "/images/fantasy/wand.png",
       ],
     },
   };
 
   const sounds = {
-    flip: new Audio("./sounds/flip.mp3"),
-    match: new Audio("./sounds/match.wav"),
-    win: new Audio("./sounds/win.mp3"),
-    hint: new Audio("./sounds/hint.wav"),
-    again: new Audio("./sounds/again.wav"),
-    themeAnimals: new Audio("./sounds/theme-animals.wav"),
-    themeSpace: new Audio("./sounds/theme-space.wav"),
-    themeFantasy: new Audio("./sounds/theme-fantasy.wav"),
+    flip: new Audio("/sounds/flip.mp3"),
+    match: new Audio("/sounds/match.wav"),
+    win: new Audio("/sounds/win.mp3"),
+    hint: new Audio("/sounds/hint.wav"),
+    again: new Audio("/sounds/again.wav"),
+    themeAnimals: new Audio("/sounds/theme-animals.wav"),
+    themeSpace: new Audio("/sounds/theme-space.wav"),
+    themeFantasy: new Audio("/sounds/theme-fantasy.wav"),
   };
 
   const gameBoard = document.getElementById("game-board")!;
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.className = `themes__${themeName}`;
     gameBoard.innerHTML = "";
 
-    const images = [..theme.images, ..theme.images];
+    const images = [...theme.images, ...theme.images];
     const shuffled = images.sort(() => 0.5 - Math.random());
 
     const newCards = shuffled.map((img) => {
